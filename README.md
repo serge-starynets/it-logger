@@ -1,2 +1,2 @@
 # it-logger
-simple app built with React and Redux
+simple app built with React/Redux, Materialize and JSON-Server
