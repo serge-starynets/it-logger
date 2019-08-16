@@ -22,7 +22,7 @@ export const getLogs = () => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error
+      payload: error.response.statusText
     });
   }
 };
@@ -47,13 +47,13 @@ export const addLog = (log) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error
+      payload: error.response.statusText
     });
   }
 };
 
-// Delete log form server
-export const deleteLog = (id) => async dispatch => {
+// Delete log from server
+export const deleteLog = id => async dispatch => {
   try {
     setLoading();
 
@@ -67,7 +67,7 @@ export const deleteLog = (id) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error
+      payload: error.response.statusText
     });
   }
 };
@@ -113,7 +113,7 @@ export const searchLogs = text => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error
+      payload: error.response.statusText
     });
   }
 };
